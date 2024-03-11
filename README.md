@@ -28,6 +28,20 @@ Commands
 			>hello world
 			>topic demo
 			
-			
-			
-			
+
+	Commands to start servers again and check messages 
+		1.	Start the ZooKeeper service
+		-> .\bin\windows\zookeeper-server-start.bat config\zookeeper.properties 
+		2.	Start the Kafka broker service
+		-> .\bin\windows\kafka-server-start.bat config\server.properties
+		
+		3.	Produce messages as below by spring boot application 	
+			>http://localhost:8080/api/kafka/publish?message=This is my first message
+			>http://localhost:8080/api/kafka/publish?message=This is my second message
+			>http://localhost:8080/api/kafka/publish?message=This is my third message
+		
+		4. 	To read events produced messages from spring boot application topic test-topic	
+		-> .\bin\windows\kafka-console-consumer.bat --topic test-topic --from-beginning --bootstrap-server localhost:9092
+		
+		
+		
