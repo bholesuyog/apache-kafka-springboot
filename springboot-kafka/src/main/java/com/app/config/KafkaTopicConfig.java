@@ -12,6 +12,6 @@ public class KafkaTopicConfig {
 	//created topic bean here after name method there are more options to explore
 	@Bean
 	public NewTopic topic() {
-		return TopicBuilder.name("test-topic").build();
+		return TopicBuilder.name("${spring.kafka.topic.name}").build();
 	}
 }
