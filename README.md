@@ -15,15 +15,15 @@ Commands
 		-> .\bin\windows\kafka-server-start.bat config\server.properties
 
 	- To create Kafka TOPIC
-		-> .\bin\windows\kafka-topics.bat --create --topic topic-demo --bootstrap-server localhost:9092
+		-> .\bin\windows\kafka-topics.bat --create --topic test-topic --bootstrap-server localhost:9092
 		
 	- Write some EVENTS into the TOPIC
-		-> .\bin\windows\kafka-console-producer.bat --topic topic-demo --bootstrap-server localhost:9092
+		-> .\bin\windows\kafka-console-producer.bat --topic test-topic --bootstrap-server localhost:9092
 			Put below events
 			>hello world
 			>topic demo
 	- Read the EVENTS
-		-> .\bin\windows\kafka-console-consumer.bat --topic topic-demo --from-beginning --bootstrap-server localhost:9092
+		-> .\bin\windows\kafka-console-consumer.bat --topic test-topic --from-beginning --bootstrap-server localhost:9092
 			get below events
 			>hello world
 			>topic demo
